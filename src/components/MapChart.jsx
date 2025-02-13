@@ -7,6 +7,8 @@ import {
   ZoomableGroup,
 } from "react-simple-maps";
 
+import "./../assets/css/MapChart.css"; // Relative path to the CSS file
+
 // Ensure your europe.json file is in the public folder
 const geoUrl = "/europe.json";
 
@@ -49,27 +51,7 @@ export default function MapChart() {
                 key={geo.rsmKey}
                 geography={geo}
                 onClick={() => handleCountryClick(geo)}
-                style={{
-                  default: {
-                    fill: geo.properties.fill || "#DDD",
-                    stroke: "#000",
-                    strokeWidth: 0.3,
-                    outline: "none",
-                  },
-                  hover: {
-                    fill: "#F53",
-                    stroke: "#000",
-                    strokeWidth: 1,
-                    outline: "none",
-                    cursor: "pointer",
-                  },
-                  pressed: {
-                    fill: "#E42",
-                    stroke: "#000",
-                    strokeWidth: 1,
-                    outline: "none",
-                  },
-                }}
+                className="geography" // Apply the CSS class
               />
             ));
           }}
@@ -78,7 +60,7 @@ export default function MapChart() {
 
       {/* Modal for Country Info */}
       {isModalOpen && selectedCountry && (
-        <div className="modal">
+        <div className="modal" onClick={handleCloseModal}>
           <div className="modal-content">
             <button className="close-button" onClick={handleCloseModal}>
               &times;

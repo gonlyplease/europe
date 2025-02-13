@@ -1,0 +1,21 @@
+/* src/assets/css/variables.css */
+:root {
+  --primary-color: #003399;
+  --secondary-color: #FFCC00;
+  --background-color: #ebebeb3f;
+  --font-color: #333;
+  --hover-color: #003399;
+  --stroke-color: #7e7d7d;
+
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.25rem;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+  
